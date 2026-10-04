@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .company {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Company Information</h1>
+    <p>Registered Companies</p>
+</header>
+
+<div class="container">
+
+    <div class="company">
+        <h2>Company 1</h2>
+        <p><b>Company Name:</b> ABC Technologies</p>
+        <p><b>Email:</b> abc@gmail.com</p>
+        <p><b>Location:</b> Pune</p>
+    </div>
+
+    <div class="company">
+        <h2>Company 2</h2>
+        <p><b>Company Name:</b> XYZ Solutions</p>
+        <p><b>Email:</b> xyz@gmail.com</p>
+        <p><b>Location:</b> Nashik</p>
+    </div>
+
+    <button onclick="goBack()">← Back to Admin Panel</button>
+
+</div>
+
+<script>
+function goBack() {
+    window.location.href = "admin-panel.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applications</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        p {
+            font-size: 16px;
+            margin: 12px 0;
+        }
+
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Student Applications</h1>
+
+<div class="box" id="applicationBox">
+    <p>Loading application...</p>
+</div>
+
+<button onclick="window.location.href='admin-panel.html'">
+    Back to Admin Panel
+</button>
+
+<script>
+
+var data = localStorage.getItem("jobApplication");
+
+var box = document.getElementById("applicationBox");
+
+if (data) {
+
+    var application = JSON.parse(data);
+
+    box.innerHTML = `
+        <h2>Application Details</h2>
+
+        <p><b>Name:</b> ${application.name}</p>
+
+        <p><b>Email:</b> ${application.email}</p>
+
+        <p><b>Mobile:</b> ${application.mobile}</p>
+
+        <p><b>Qualification:</b> ${application.qualification}</p>
+
+        <p><b>Skills:</b> ${application.skills}</p>
+
+        <p><b>Status:</b> Application Submitted ✅</p>
+    `;
+
+} else {
+
+    box.innerHTML = `
+        <h2>No Applications Found</h2>
+        <p>There is currently no student application.</p>
+    `;
+
+}
+
+</script>
+
+</body>
+</html>

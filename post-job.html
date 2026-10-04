@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post Job</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        .job-box {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 11px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .back a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="job-box">
+
+        <h1>Post a Job</h1>
+
+        <form onsubmit="postJob(event)">
+
+            <label>Job Title</label>
+            <input
+                type="text"
+                placeholder="e.g. Web Developer"
+                required
+            >
+
+            <label>Job Description</label>
+            <textarea
+                placeholder="Enter job description"
+                required
+            ></textarea>
+
+            <label>Location</label>
+            <input
+                type="text"
+                placeholder="e.g. Pune"
+                required
+            >
+
+            <label>Salary</label>
+            <input
+                type="text"
+                placeholder="e.g. ₹3,00,000 - ₹5,00,000"
+                required
+            >
+
+            <label>Experience</label>
+            <input
+                type="text"
+                placeholder="e.g. Fresher"
+                required
+            >
+
+            <label>Last Date to Apply</label>
+            <input
+                type="date"
+                required
+            >
+
+            <button type="submit">
+                Post Job
+            </button>
+
+        </form>
+
+        <div class="back">
+            <a href="index.html">← Back to Home</a>
+        </div>
+
+    </div>
+
+    <script>
+
+        function postJob(event) {
+
+            event.preventDefault();
+
+            alert("Job posted successfully!");
+
+            window.location.href = "job.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

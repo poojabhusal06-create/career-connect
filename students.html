@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .student {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Information</h1>
+    <p>Registered Students</p>
+</header>
+
+<div class="container">
+
+    <div class="student">
+        <h2>Student 1</h2>
+        <p><b>Name:</b> Pooja</p>
+        <p><b>Email:</b> pooja@gmail.com</p>
+        <p><b>Qualification:</b> BCA</p>
+        <p><b>Skills:</b> HTML, CSS, Python</p>
+    </div>
+
+    <div class="student">
+        <h2>Student 2</h2>
+        <p><b>Name:</b> Student Name</p>
+        <p><b>Email:</b> student@gmail.com</p>
+        <p><b>Qualification:</b> BCA</p>
+        <p><b>Skills:</b> Java, SQL</p>
+    </div>
+
+    <button onclick="goBack()">← Back to Admin Panel</button>
+
+</div>
+
+<script>
+function goBack() {
+    window.location.href = "admin-panel.html";
+}
+</script>
+
+</body>
+</html>

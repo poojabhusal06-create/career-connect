@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Admin Panel</h1>
+
+    <!-- Student Management -->
+    <div class="box">
+        <h2>👨‍🎓 Student Management</h2>
+
+        <button onclick="window.location.href='students.html'">
+            View Students
+        </button>
+    </div>
+
+
+    <!-- Company Management -->
+    <div class="box">
+        <h2>🏢 Company Management</h2>
+
+        <button onclick="window.location.href='companies.html'">
+            View Companies
+        </button>
+    </div>
+
+
+    <!-- Job Management -->
+    <div class="box">
+        <h2>💼 Job Management</h2>
+
+        <button onclick="window.location.href='job-management.html'">
+            Manage Jobs
+        </button>
+    </div>
+
+
+    <!-- Contact Admin -->
+    <div class="box">
+        <h2>📩 Contact Admin</h2>
+
+        <button onclick="window.location.href='contact.html'">
+            View Contact
+        </button>
+    </div>
+
+
+    <!-- Logout -->
+    <div class="box">
+
+        <button onclick="window.location.href='index.html'">
+            Logout
+        </button>
+
+    </div>
+
+</body>
+</html>

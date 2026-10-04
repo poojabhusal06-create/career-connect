@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Jobs</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .job {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Available Jobs</h1>
+
+<div class="job">
+    <h2>Web Developer</h2>
+    <p>Company: ABC Technologies</p>
+    <p>Location: Pune</p>
+    <p>Salary: ₹3 - ₹5 LPA</p>
+    <button onclick="applyJob()">Apply Now</button>
+</div>
+
+<div class="job">
+    <h2>Python Developer</h2>
+    <p>Company: Tech Solutions</p>
+    <p>Location: Nashik</p>
+    <p>Salary: ₹3 - ₹6 LPA</p>
+    <button onclick="applyJob()">Apply Now</button>
+</div>
+
+<div class="job">
+    <h2>Java Developer</h2>
+    <p>Company: Infosys Solutions</p>
+    <p>Location: Mumbai</p>
+    <p>Salary: ₹4 - ₹7 LPA</p>
+    <button onclick="applyJob()">Apply Now</button>
+</div>
+
+<div class="job">
+    <h2>Data Analyst</h2>
+    <p>Company: DataTech India</p>
+    <p>Location: Pune</p>
+    <p>Salary: ₹3.5 - ₹6 LPA</p>
+    <button onclick="applyJob()">Apply Now</button>
+</div>
+
+<div class="job">
+    <h2>AI / ML Intern</h2>
+    <p>Company: Future AI Technologies</p>
+    <p>Location: Bengaluru</p>
+    <p>Salary: ₹15,000 - ₹25,000 per month</p>
+    <button onclick="applyJob()">Apply Now</button>
+</div>
+
+<script>
+function applyJob() {
+
+    if (localStorage.getItem("studentLoggedIn") === "true") {
+
+        window.location.href = "apply.html";
+
+    } else {
+
+        alert("Please log in as a student to apply.");
+
+        window.location.href = "student.html";
+    }
+}
+</script>
+
+</body>
+</html>
